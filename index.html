@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+        <title>Yatzee!</title>
+  </head>
+  <body>
+        <h1>Maxi Yatzee</h1>
+        <p><strong>Regler:</strong></p>
+        <p>Det er tvungen Yatzee, så man kaster tre ganger før man skifter spiller</p>
+        
+      <table id="rollInfoTable">
+            <tr class="total">
+                  <th>Rolls Left</th>
+                  <td class="left"><div class="short text" id="rollsLeft"></div></td>
+            </tr>
+            <tr class="total">
+                  <th>Dice Total</th>
+                  <td><div class="short text" id="dieTotal"></div></td>
+            </tr>
+      </table>
+
+      <table id="diceTable">
+            <tr>
+                  <td><input type="text"><div id="die1"></div></td>
+                  <td><input type="text"><div id="die2"></div></td>
+                  <td><input type="text"><div id="die3"></div></td>
+                  <td><input type="text"><div id="die4"></div></td>
+                  <td><input type="text"><div id="die5"></div></td>
+                  <td><input type="text"><div id="die6"></div></td>
+            </tr>
+            <tr>
+                  <td><input type="checkbox" id="keep1"></td>
+                  <td><input type="checkbox" id="keep2"></td>
+                  <td><input type="checkbox" id="keep3"></td>
+                  <td><input type="checkbox" id="keep4"></td>
+                  <td><input type="checkbox" id="keep5"></td>
+                  <td><input type="checkbox" id="keep6"></td>
+            </tr>
+            <tr>
+                  <td colspan="6"><input type="button" id="rollBtn" value="Roll" disabled="disabled"></td>
+            </tr>
+      </table>
+
+  </body>
+  <script src="script.js"></script>
+
+ 
+
+</html>

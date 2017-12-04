@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="A simple space shooter in HTML5">
+  <title>Space shooter!</title>
+</head>
+
+<style>
+
+#myContainer {
+  width: 600px;
+  height: 600px;
+  position: relative;
+ /* background: rgb(22, 102, 167); */
+}
+#myShooter {
+  /* width: 50px;*/
+  /* height: 50px;*/
+  position: absolute;
+  /* background-color: rgb(190, 177, 177); */
+}
+
+</style>
+<body background="back.png">
+
+<p>
+<label id="shotCounter"></label>
+</p>
+
+<p>
+<button onclick="goLeft()">Left</button> 
+<button onclick="goRight()">Right</button> 
+<input type="text" onkeydown="checkKey()">
+</p>
+
+<div id ="myContainer">
+<div id ="myShooter"> <img src="ship3.png"> </div>
+</div>
+
+<script>
+
+//Place shooter
+var pos=0;
+var shots=0;
+var pl = document.getElementById("myShooter");
+pl.style.top = "500px";
+
+function goRight() {
+     var elem = document.getElementById("myShooter");   
+     pos=pos+10;
+     console.log(pos);
+     elem.style.left = pos + 'px'; 
+}
+
+function goLeft() {
+     var elem = document.getElementById("myShooter");   
+     pos=pos-10;
+     console.log(pos);
+     elem.style.left = pos + 'px'; 
+}
+
+function goShoot() {
+   shots++;
+   document.getElementById("shotCounter").innerHTML = "Shots fired: " + shots;
+}
+
+function shootMissile() {
+
+
+
+}
+
+
+function checkKey() {    
+    var k = event.which || event.keyCode();
+    console.log("Key press: " + k);
+    
+    switch (k) {
+      case 32: goShoot(); //Control shoot
+               break;
+      
+      case 65: goLeft(); //Control left
+               break;
+
+      case 68: goRight(); //Control right
+               break;
+
+      default: break;
+ }
+}
+</script>
+
+</body>
+</html>
